@@ -39,6 +39,11 @@ header{
     
 }
 
+.banner{
+    position: relative;
+    
+    
+}
 nav{
     position: fixed;
     
@@ -101,13 +106,14 @@ nav a:hover::before {
 
 }
 
-.playground-picture{
-    margin: 10% 5% 5% 5%;
+.thomasdirector{
+    margin: 0% 2% 2% 2%;
     float:right;
     position: relative;
     width: 100%;
-    height: auto;
+    height:auto;
     max-width: 40%;
+    overflow:hidden;
     
 }
 
@@ -151,16 +157,13 @@ nav a:hover::before {
         font-size: 20px;
     }
     
-    .playground-picture{
-        float:unset;
-    }
-
+    
     .bio{
-        margin-top: 25%;
+        margin: 110px 20px 20px 20px;
         font-size: 4.5vw;
     }
 }
-@media only screen and (max-width: 1200px){
+@media only screen and (min-width: 601) and (max-width: 1200px){
 
     .bio{
         margin-top: 15%;
