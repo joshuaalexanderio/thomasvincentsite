@@ -1,121 +1,168 @@
-/* background color stored in variable to easily change multiple elements*/
 :root {
-    --background: rgba(14, 154, 167, .5);
+    --background: rgba(14, 154, 167, 1);
+    --yellow-text: rgba(246, 205, 97, 1);
 }
 
-/* ||General styles|| */
-
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-
-body{
+body {
     margin: 0;
-    background: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: poppins;
     font-weight: 300;
-    
-    color: black;
 }
 
-p {
-     color: black;
-    font-size: 20px;
-    
+.container {
+    width: 100%;    
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-left: 0;
+    margin-right: 0;
+    z-index: 999;
 }
 
-q {
-    font-style: italic;
+header{
+    background-color: var(--background);
+    
 }
 
 .logo {
-    font-family: 'Poppins', sans-serif;
-    font-size: 50px;
-    font-weight: 800;
-    letter-spacing: 5px;
-    color: black;
-
-}
-
-.content{
-    height: 200vh;
-    background-color: #333;
-    background-size: cover;
-    display: grid;
-}
-
-/* || Header and Main Navigation */
-
-header {
-    background: var(--background);
+    background-color: var(--background);
     text-align: center;
+    font-size: 50px;
+    margin: 0;
+    
+    
+}
+
+.logo a{
+    color: var(--yellow-text) !important;
+    
+}
+
+nav{
     position: fixed;
-    z-index: 999;
-    width: 100%;
-    margin: 20%;
-    margin-top:auto;
-    margin-right:auto;
-    margin-bottom:auto;
-    margin-left:auto;    
-}
-
-nav {
-    position: absolute;
-    right: 0;
-    left: 0;
-    margin:auto;
-    text-align: left;
-    top: 100%;
-    background: var(--background);
-    word-spacing: 10em;
-    
     
 }
-
 nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    text-align:center;
+    text-align: center;
+    left: 0;
+    right: 0;
+    height:auto;
+    width: auto !important;
+    position: fixed;
+    background-color: var(--background);
+    z-index: 999;
     
 }
 
 nav li {
-    margin-bottom: 10px;
-    margin-left: 10px;
     display: inline-block;
+    margin-left: 5vw;
+    padding-bottom: .8vw;
+    padding-top: 1vw;
+    position: relative;
 }
 
 nav a {
-    color: white;
+    color:#444;
     text-decoration: none;
-    font-size: 1.8rem; 
-      
-
+    text-transform: uppercase;
 }
 
-nav a:hover{
+nav a:hover {
     color: #000;
 }
 
-/* || About page styles || */
-.bio {
-    position: fixed;
-    top: 225px;
-    right: 20%;
-    left: 20%;
-    padding: 15px;
-    background-color: white;
-    border-radius: 25px;
+nav a:before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: #555;
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
     
 }
-h1 {
-    color: black;
+
+.bio {
+    top: 20%;
+    margin-top: 10%;
+    margin-left: 20%;
+    font-size: .6vw;
+
+}
+
+.playground-picture{
+    margin: 10% 5% 5% 5%;
+    float:right;
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 40%;
+    
+}
+
+.fa{
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
     text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
 }
 
-h2 {
+.social-links {
+    margin-left: 50%;
+}
+.fa-instagram {
+    
     color: black;
+    transition: all 250ms ease-in-out;
+
+}
+.fa-instagram:hover {
+    transform:scale(1.4);
 }
 
+.fa-twitter {
+    
+    color: black;
+    transition: all 250ms ease-in-out;
+
+}
+
+.fa-twitter:hover{
+    transform:scale(1.4);
+}
+
+
+@media only screen and (max-width: 600px){
+
+    .logo{
+        font-size: 20px;
+    }
+    
+    .playground-picture{
+        float:unset;
+    }
+
+    .bio{
+        margin-top: 20%;
+        font-size: 5vw;
+    }
+}
+@media only screen and (max-width: 1200px){
+
+    .bio{
+        margin-top: 15%;
+    }
+}
